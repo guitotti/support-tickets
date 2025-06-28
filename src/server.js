@@ -3,8 +3,8 @@ import http from "node:http";
 import { jsonHandler } from "./middlewares/jsonHandler.js";
 import { routeHandler } from "./middlewares/routeHandler.js";
 
-function listener(request, response) {
-    jsonHandler(request, response);
+async function listener(request, response) {
+    await jsonHandler(request, response);
     routeHandler(request, response);
 }
 
